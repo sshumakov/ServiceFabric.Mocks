@@ -44,7 +44,7 @@ jobs:
         run: |
           Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force -Scope CurrentUser   
           $ProgressPreference = 'SilentlyContinue'
-          $keyPath = "HKLM:\SOFTWARE\Microsoft\Service Fabric SDK\FabricSDKVersion"
+          $keyPath = "HKLM:\SOFTWARE\Microsoft\Service Fabric SDK"
           if (Test-Path $keyPath) {
             Remove-Item -Path $keyPath -Force
             Write-Output "Registry key removed: $keyPath"
